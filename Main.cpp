@@ -16,19 +16,37 @@
 using namespace std;
 
 	int main(){
+	// first string
 	 LetterInventory inventory1; // create an instance of Letter Inventory
 
-	 inventory1.constructor();
-
 	 string entry;// variable for the line to be analyzed
+	 cout<< "enter a string"<< endl; // print
+	 cin>> entry; // set entry = to input
 
-	 cout<< "enter a string"; // print
+	 inventory1.fillArray(entry); // method to convert to ASCII values put in array
+	 inventory1.print(); // print to console
 
-	 cin>> entry; // set entry = to input value
+	 cout<<""<<endl;//spacer
 
-	 inventory1.convertToNums(entry); // method to convert to ascii values
+	// second string
+	 LetterInventory inventory2; // second string
 
-	//LetterInventory inventory2 = new LetterInventory("string two");
+	 string entryTwo;
+	 cout<< "enter a second string"<< endl;
+	 cin>> entryTwo;
 
-	//LetterInventory sum = inventory1.add(inventory2);
-	}
+	 inventory2.fillArray(entryTwo);
+	 inventory2.print();
+
+	 cout<<""<<endl;//spacer
+
+	// add the two strings
+	 LetterInventory add;
+
+	 string addStr = entry + entryTwo; // combine the two previous entries
+
+	 add.fillArray(addStr);
+	 add.print();
+
+
+	};
